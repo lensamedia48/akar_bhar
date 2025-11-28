@@ -1,2 +1,0 @@
-# akar_bhar
-alaliyaljaami
