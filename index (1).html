@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aliy Bhar Projeck — Akar Bahar Kepulauan Kei</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --deep-brown:#4A3526;
+      --cream:#F4EDE2;
+      --soft-gold:#C8A97E;
+      --navy:#0F1D2B;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;color:var(--navy);background:var(--cream);} 
+
+    .hero{min-height:88vh;background-image:linear-gradient(rgba(10,18,28,0.42), rgba(10,18,28,0.18)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80');background-size:cover;background-position:center;background-attachment:fixed;display:flex;align-items:center}
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:40px}
+    .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center}
+    .hero-title{color:var(--cream);font-family:'Playfair Display',serif;font-size:44px;line-height:1.05;margin:0 0 12px}
+    .hero-sub{color:var(--cream);opacity:0.95;margin:0 0 20px;font-size:16px}
+
+    .cta-row{display:flex;gap:14px}
+    .btn{display:inline-block;padding:12px 18px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--soft-gold);color:var(--navy);box-shadow:0 8px 24px rgba(200,169,126,0.16)}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.18);color:var(--cream)}
+
+    .glass-card{background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));backdrop-filter: blur(6px);padding:22px;border-radius:14px;border:1px solid rgba(255,255,255,0.06)}
+
+    .motif{height:92px;background:linear-gradient(90deg, rgba(74,53,38,0.06), rgba(200,169,126,0.03));display:flex;align-items:center;justify-content:center}
+    .motif svg{width:86%;opacity:0.12}
+
+    section{padding:64px 0}
+    .section-title{font-family:'Playfair Display',serif;font-size:28px;color:var(--deep-brown);margin:0 0 18px}
+    .lead{color:rgba(45,45,45,0.8);max-width:780px}
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+    .product{background:linear-gradient(180deg,white, #fffaf6);border-radius:14px;padding:16px;border:1px solid rgba(74,53,38,0.06);box-shadow:0 8px 20px rgba(16,24,32,0.04);display:flex;flex-direction:column}
+    .product img{width:100%;height:260px;object-fit:cover;border-radius:10px}
+    .product h4{margin:12px 0 6px;font-size:18px;color:var(--deep-brown)}
+    .price{font-weight:700;color:var(--deep-brown)}
+    .meta{font-size:13px;color:rgba(45,45,45,0.6);margin-top:8px}
+
+    .features{display:flex;gap:20px;flex-wrap:wrap}
+    .feature{flex:1;min-width:220px;background:linear-gradient(180deg, #fff, #fffefc);padding:18px;border-radius:12px;border:1px solid rgba(74,53,38,0.04)}
+
+    footer{padding:32px 0;text-align:center;color:rgba(45,45,45,0.7)}
+
+    @media (max-width:880px){.hero-grid{grid-template-columns:1fr}.hero{padding-bottom:40px}.hero-title{font-size:34px}.product img{height:220px}}
+
+    .reveal{opacity:0;transform:translateY(18px);animation:fadeUp .9s forwards ease-out}
+    .delay-1{animation-delay:.15s}.delay-2{animation-delay:.28s}.delay-3{animation-delay:.42s}.delay-4{animation-delay:.58s}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+
+    .islands{position:relative;height:120px;margin-top:-40px}
+    .islands svg{display:block;width:100%;height:100%}
+
+    .order-form{background:#fff;padding:18px;border-radius:12px;border:1px solid rgba(74,53,38,0.06)}
+    .form-row{display:flex;gap:8px}
+    .form-row .field{flex:1}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(16,24,32,0.06);font-size:14px}
+    label{font-size:13px;color:var(--deep-brown);display:block;margin-bottom:6px;font-weight:600}
+
+    .accent{height:4px;background:linear-gradient(90deg,var(--soft-gold), rgba(200,169,126,0.6));border-radius:6px;width:110px;margin:14px 0}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="reveal delay-1">
+          <h1 class="hero-title">Ocean-Born Luxury — Akar Bahar from Kepulauan Kei</h1>
+          <p class="hero-sub">Handcrafted ethnic jewelry. Ethically sourced. Limited pieces. Each item tells the story of the sea and the people who tend it.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:faqihumarahmadgazali@gmail.com?subject=Pemesanan%20Akar%20Bahar">Order via Email</a>
+            <a class="btn btn-outline" href="#catalog">View Collection</a>
+          </div>
+        </div>
+
+        <aside class="glass-card reveal delay-2">
+          <h3 style="margin:0 0 8px;color:var(--cream);font-family:'Playfair Display';font-size:20px">Limited Offer</h3>
+          <div style="margin-bottom:6px;color:var(--cream);font-weight:700">Promo — Rp 100.000</div>
+          <p style="margin:0 0 12px;color:rgba(255,255,255,0.92);font-size:13px">Get a premium Akar Bahar piece today — includes sticker & raw sample.</p>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="flex:1">
+              <div style="font-size:12px;color:rgba(255,255,255,0.9);">Starting at</div>
+              <div style="font-size:18px;font-weight:700;color:var(--navy);background:var(--cream);display:inline-block;padding:6px 10px;border-radius:8px;margin-top:6px">IDR 55.000</div>
+            </div>
+            <div style="width:92px;text-align:right">
+              <a class="btn btn-primary" href="mailto:faqihumarahmadgazali@gmail.com?subject=Pemesanan%20Akar%20Bahar">Order</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <div class="islands" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,40 C180,110 360,0 720,40 C1080,80 1260,20
+    <!-- FOOTER -->
+    <footer style="background: #031F1A; color: white; padding: 40px 20px; margin-top: 80px; text-align: center; border-top: 3px solid #0D3B2E;">
+        <h2 style="margin: 0; font-size: 24px; font-weight: 700; letter-spacing: 1px;">Aliy Bhar Projeck</h2>
+        <p style="margin: 6px 0 20px; opacity: 0.8;">Luxury Ethnic Jewelry • Kepulauan Kei</p>
+
+        <div style="margin-bottom: 16px; font-size: 15px; line-height: 26px; opacity: 0.9;">
+            📍 Kepulauan Kei, Maluku<br>
+            ✉ Email: faqihumarahmadgazali@gmail.com<br>
+            📞 WhatsApp: 08xxxxxx (isi nanti)
+        </div>
+
+        <div style="margin-top: 16px; opacity: 0.6; font-size: 13px;">
+            © 2025 Aliy Bhar Projeck. All Rights Reserved.
+        </div>
+    </footer>
+
